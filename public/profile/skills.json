@@ -1,0 +1,34 @@
+{
+    "intro": "I love to learn new things and experiment with new technologies.\nThese are some of the major languages, technologies, tools and platforms I have worked with:",
+    "skills": [
+        {
+            "title": "Languages & Databases",
+            "items": [
+                { "icon": "FaJava", "title": "Java" },
+                { "icon": "SiPhp", "title": "PHP" },
+                { "icon": "SiPython", "title": "Python" },
+                { "icon": "SiMysql", "title": "MySQL" }
+            ]
+        },
+        {
+            "title": "Frameworks & Technologies",
+            "items": [
+                { "icon": "SiFlutter", "title": "Flutter" },
+                { "icon": "SiDart", "title": "Dart" },
+                { "icon": "SiFirebase", "title": "Firebase" },
+                { "icon": "SiAndroidstudio", "title": "Android Studio" },
+                { "icon": "SiGit", "title": "Git" }
+            ]
+        },
+        {
+            "title": "UI/UX Design",
+            "items": [
+                { "icon": "SiFigma", "title": "Figma" },
+                { "icon": "FaPencilRuler", "title": "Adobe XD" },
+                { "icon": "SiSketch", "title": "Sketch" },
+                { "icon": "SiFramer", "title": "Framer" },
+                { "icon": "SiMiro", "title": "Miro" }
+            ]
+        }
+    ]
+}

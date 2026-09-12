@@ -1,0 +1,20 @@
+{
+    "social": [
+        {
+            "network" : "linkedin",
+            "href": "https://www.linkedin.com/in/adham-ramadan-b38169342/"
+        },
+        {
+            "network" : "github",
+            "href": "https://github.com/ah2821345678-ship-it"
+        },
+        {
+            "network" : "behance",
+            "href": "https://www.behance.net/fec7c54a/"
+        },
+        {
+            "network" : "email",
+            "href": "ah2821345678@gmail.com"
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+  "experiences": [
+    {
+      "dateText": "Currently Enrolled",
+      "title": "Cross-Platform Mobile App Development — Flutter",
+      "subtitle": "Digital Egypt Pioneers Initiative (DEPI)",
+      "workType": "6-Month Training Program",
+      "workDescription": [
+        "Enrolled in a structured **6-month** training program focused on cross-platform mobile app development using **Flutter**.",
+        "Part of the Digital Egypt Pioneers Initiative, a national tech upskilling program."
+      ]
+    },
+    {
+      "dateText": "Currently Enrolled",
+      "title": "Mobile Application Development",
+      "subtitle": "Information Technology Institute (ITI)",
+      "workType": "102-Hour Training Program",
+      "workDescription": [
+        "Enrolled in a **102-hour** technical training program focused on mobile application development.",
+        "Training delivered by the Information Technology Institute (ITI)."
+      ]
+    },
+    {
+      "dateText": "Completed",
+      "title": "UI/UX Design",
+      "subtitle": "NTI / ITIDA",
+      "workType": "120 Hours (Technical Training: 90h · Freelancing: 30h) — Score: 96.5%",
+      "workDescription": [
+        "Completed a **120-hour** program covering UI/UX Design, split between technical training (90h) and freelancing skills (30h).",
+        "Achieved a final score of **96.5%**."
+      ]
+    },
+    {
+      "dateText": "Completed",
+      "title": "Python & Data Analysis",
+      "subtitle": "NTI / ITIDA",
+      "workType": "120 Hours (Technical Training: 90h · Freelancing: 30h) — Score: 98.5%",
+      "workDescription": [
+        "Completed a **120-hour** program covering Python & Data Analysis, split between technical training (90h) and freelancing skills (30h).",
+        "Achieved a final score of **98.5%**."
+      ]
+    },
+    {
+      "dateText": "Completed",
+      "title": "Data Analysis Training",
+      "subtitle": "Creativa, Fayoum",
+      "workType": "1-Week Offline Training",
+      "workDescription": [
+        "Completed a **1-week** offline training program focused on Data Analysis at Creativa, Fayoum."
+      ]
+    },
+    {
+      "dateText": "Completed",
+      "title": "Web Development Training",
+      "subtitle": "Creativa, Fayoum",
+      "workType": "1-Week Offline Training",
+      "workDescription": [
+        "Completed a **1-week** offline training program focused on Web Development at Creativa, Fayoum."
+      ]
+    }
+  ]
+}

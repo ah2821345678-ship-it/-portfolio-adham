@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "image": "images/projects/malabna-poster.png",
+      "title": "Malabna – Football Field Booking & Community App",
+      "bodyText": "- A **football field booking and community app** designed to make finding and booking football fields easier.\n - Users can **discover nearby fields**, check available booking times, book fields, make payments, and connect with other players through the community.\n - Field owners can manage their fields, bookings, available time slots, and earnings.",
+      "links": [
+        {
+          "text": "Behance",
+          "href": "https://www.behance.net/gallery/253183279/Malabna-UXUI-Case-Study"
+        }
+      ],
+      "tags": [
+        "Figma",
+        "UI/UX Design",
+        "User Research",
+        "Wireframing",
+        "Prototyping"
+      ]
+    },
+    {
+      "image": "images/projects/egypt-railway-poster.jpg",
+      "title": "Egypt Railway – Desktop Website Redesign",
+      "bodyText": "- A modern **redesign concept** for the Egypt Railway website, focused on improving the user experience and making train booking and railway services easier to navigate.\n - Includes redesigned screens for **searching and booking tickets**, train details, and **live train tracking**.\n - Also covers user bookings, authentication, and customer support flows.",
+      "links": [
+        {
+          "text": "Behance",
+          "href": "https://www.behance.net/gallery/253151675/Reimagining-Egypt-National-Railways-UXUI-Case-Study"
+        }
+      ],
+      "tags": [
+        "Figma",
+        "UI/UX Design",
+        "Wireframing",
+        "Prototyping",
+        "User Flow"
+      ]
+    }
+  ]
+}

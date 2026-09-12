@@ -1,0 +1,67 @@
+{
+    "education": [
+        {
+            "title": "Expected Graduation: 2027",
+            "cardTitle": "Bachelor of Information Technology",
+            "cardSubtitle": "Beni Suef Technological University — ICT Department",
+            "cardDetailedText": "Current Year: 4th Year",
+            "icon": {
+                "src": "images/education/lorem-ipsum.png"
+            }
+        },
+        {
+            "title": "Currently Enrolled",
+            "cardTitle": "Cross-Platform Mobile App Development — Flutter",
+            "cardSubtitle": "Digital Egypt Pioneers Initiative (DEPI)",
+            "cardDetailedText": "6-Month Training Program",
+            "icon": {
+                "src": "images/education/lorem-ipsum.png"
+            }
+        },
+        {
+            "title": "Currently Enrolled",
+            "cardTitle": "Mobile Application Development",
+            "cardSubtitle": "Information Technology Institute (ITI)",
+            "cardDetailedText": "102-Hour Training Program",
+            "icon": {
+                "src": "images/education/lorem-ipsum.png"
+            }
+        },
+        {
+            "title": "Completed",
+            "cardTitle": "UI/UX Design",
+            "cardSubtitle": "NTI / ITIDA",
+            "cardDetailedText": "120 Hours (Technical Training: 90h • Freelancing: 30h) — Score: 96.5%",
+            "icon": {
+                "src": "images/education/lorem-ipsum.png"
+            }
+        },
+        {
+            "title": "Completed",
+            "cardTitle": "Python & Data Analysis",
+            "cardSubtitle": "NTI / ITIDA",
+            "cardDetailedText": "120 Hours (Technical Training: 90h • Freelancing: 30h) — Score: 98.5%",
+            "icon": {
+                "src": "images/education/lorem-ipsum.png"
+            }
+        },
+        {
+            "title": "Completed",
+            "cardTitle": "Data Analysis Training",
+            "cardSubtitle": "Creativa, Fayoum",
+            "cardDetailedText": "1-Week Offline Training",
+            "icon": {
+                "src": "images/education/lorem-ipsum.png"
+            }
+        },
+        {
+            "title": "Completed",
+            "cardTitle": "Web Development Training",
+            "cardSubtitle": "Creativa, Fayoum",
+            "cardDetailedText": "1-Week Offline Training",
+            "icon": {
+                "src": "images/education/lorem-ipsum.png"
+            }
+        }
+    ]
+}
