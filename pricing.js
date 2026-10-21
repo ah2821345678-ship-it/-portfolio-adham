@@ -175,11 +175,11 @@ window.PRICING = {
       ]
     },
 
-    /* ------------------------- Software Development ------------------------- */
+    /* ---------------------------- Build Portfolio ---------------------------- */
     {
-      id: "software",
-      label: "Software Development", label_ar: "تطوير البرمجيات",
-      title: "Software Development Pricing", title_ar: "أسعار تطوير البرمجيات",
+      id: "portfolio",
+      label: "Build Portfolio", label_ar: "بناء بورتفوليو",
+      title: "Build Portfolio Pricing", title_ar: "أسعار بناء البورتفوليو",
       sub: "Professional portfolio website packages for projects within a clearly defined scope.",
       sub_ar: "باقات مواقع بورتفوليو احترافية للمشاريع ضمن نطاق محدد بوضوح.",
       unit: "/ Project", unit_ar: "/ مشروع",
@@ -187,7 +187,7 @@ window.PRICING = {
       note_ar: "الباقات تغطي مواقع البورتفوليو ضمن النطاق المذكور. لا تشمل تطوير الـ Backend أو إعداد قواعد البيانات أو أنظمة تسجيل الدخول أو ربط APIs معقّد أو تسجيل الدومين أو الاستضافة، ويتم تسعيرها بشكل منفصل.",
       plans: [
         {
-          name: "Basic Software", name_ar: "برمجيات أساسية", price: "$70",
+          name: "Basic Portfolio", name_ar: "بورتفوليو أساسي", price: "$70",
           desc: "A professional personal portfolio website with the essential sections.",
           desc_ar: "موقع بورتفوليو شخصي احترافي بالأقسام الأساسية.",
           features: [
@@ -201,7 +201,7 @@ window.PRICING = {
           time: ["5–7 Days", "5–7 أيام"]
         },
         {
-          name: "Pro Software", name_ar: "برمجيات احترافية", price: "$120", popular: true,
+          name: "Pro Portfolio", name_ar: "بورتفوليو احترافي", price: "$120", popular: true,
           badge: "Recommended", badge_ar: "موصى بها",
           desc: "A portfolio website with a custom design, richer interactions and project detail pages.",
           desc_ar: "موقع بورتفوليو بتصميم مخصّص وتفاعلات أغنى وصفحات تفاصيل للمشاريع.",
