@@ -52,10 +52,36 @@ body.intro .tilt img{object-position:50% 30%}body.intro .tilt{box-shadow:none}
 .about p{color:var(--muted);line-height:1.7;font-size:1.08rem;margin:12px 0 24px}
 @media(max-width:820px){.about{grid-template-columns:1fr}}
 /* education / exp / services / etc */
-.edu{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}.logo-box{width:96px;height:96px;border-radius:22px;background:var(--bg2);border:1px solid var(--border);display:grid;place-items:center;font-size:2rem;font-weight:700;overflow:hidden}.logo-box img{width:100%;height:100%;object-fit:contain}
-.edu h3{font-size:1.5rem;letter-spacing:-.02em}.edu .meta{color:var(--muted);margin:6px 0}
+.logo-box{width:96px;height:96px;border-radius:22px;background:var(--bg2);border:1px solid var(--border);display:grid;place-items:center;font-size:2rem;font-weight:700;overflow:hidden}.logo-box img{width:100%;height:100%;object-fit:contain}
+/* education card (glass, logo link, date pill, tags) */
+.card.edu{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:clamp(18px,3vw,32px);row-gap:0;align-items:start;padding:clamp(22px,3.4vw,36px);border-radius:28px;
+ background:radial-gradient(120% 80% at 0% 0%,color-mix(in srgb,var(--accent) 14%,transparent),transparent 60%),linear-gradient(150deg,var(--g1),var(--g2));border:1px solid var(--gb);
+ -webkit-backdrop-filter:blur(22px) saturate(1.6);backdrop-filter:blur(22px) saturate(1.6);box-shadow:inset 0 1px 0 var(--gh),0 28px 60px -36px var(--shadow)}
+.edu-logo{display:block;grid-column:1;grid-row:1;width:clamp(68px,11vw,112px);aspect-ratio:1;border-radius:50%;overflow:hidden;background:#fff;border:1px solid var(--border);box-shadow:0 14px 34px -14px var(--shadow),0 0 0 6px color-mix(in srgb,var(--accent) 10%,transparent);transition:transform .45s cubic-bezier(.2,.9,.3,1.25),box-shadow .4s}
+.edu-logo img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.04)}
+.edu-info{grid-column:2;grid-row:1;min-width:0}.edu-more{grid-column:2;grid-row:2;min-width:0}
+@media(max-width:700px){.edu-more{grid-column:1/-1}.card.edu{column-gap:16px}.edu-date,.edu-yr{padding:7px 13px;font-size:.88rem}}
+.edu-logo:hover,.edu-logo:focus-visible{transform:scale(1.07) rotate(-2deg);box-shadow:0 20px 40px -14px var(--shadow),0 0 0 8px color-mix(in srgb,var(--accent) 22%,transparent)}
+.edu h3{font-size:clamp(1.3rem,2.6vw,1.9rem);letter-spacing:-.02em;line-height:1.2}
+.edu-major{margin-top:8px;color:var(--accent);font-weight:600;font-size:clamp(1.02rem,1.9vw,1.2rem)}
+.edu-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:16px}
+.edu-date,.edu-yr{display:inline-flex;align-items:center;gap:9px;padding:8px 16px;border-radius:99px;font-size:.95rem;font-weight:700;letter-spacing:.02em}
+.edu-date{font-family:'JetBrains Mono',ui-monospace,monospace;color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);border:1px solid color-mix(in srgb,var(--accent) 34%,transparent)}
+.edu-yr{color:var(--muted);font-weight:600;border:1px solid var(--border);background:color-mix(in srgb,var(--surface) 55%,transparent)}
+.edu-date svg,.edu-loc svg{width:19px;height:19px;flex:none}
+.edu-loc{display:flex;align-items:center;gap:10px;margin-top:16px;color:var(--muted);line-height:1.45}.edu-loc svg{color:var(--accent)}
+.edu-div{height:1px;background:var(--border);margin:22px 0 18px}
+.edu-lbl{font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.edu-tags{display:flex;flex-wrap:wrap;gap:10px}
+.edu-tags span{padding:9px 16px;border-radius:14px;font-size:.9rem;border:1px solid var(--border);background:color-mix(in srgb,var(--surface) 60%,transparent);transition:border-color .3s,translate .3s,color .3s}
+.edu-tags span.more{font-weight:800;letter-spacing:.2em;color:var(--accent);border-style:dashed;padding-inline:18px}
+@media(min-width:701px){.edu-date{position:absolute;top:clamp(22px,3.4vw,36px);inset-inline-end:clamp(22px,3.4vw,36px)}.edu-info h3{padding-inline-end:200px}}
+@keyframes eduPulse{0%{box-shadow:0 14px 34px -14px var(--shadow),0 0 0 0 color-mix(in srgb,var(--accent) 60%,transparent)}70%,100%{box-shadow:0 14px 34px -14px var(--shadow),0 0 0 18px color-mix(in srgb,var(--accent) 0%,transparent)}}
+a.edu-logo{animation:eduPulse 1.9s cubic-bezier(.2,.6,.3,1) infinite;cursor:pointer}a.edu-logo:hover,a.edu-logo:focus-visible{animation:none}
+@media(hover:hover){.edu-tags span:hover{translate:0 -2px;border-color:var(--accent);color:var(--accent)}}
+[dir=rtl] .card.edu{font-family:Cairo,"Inter Tight",system-ui,sans-serif}[dir=rtl] .edu-lbl{letter-spacing:0}
 .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:34px}
-.tl{margin-top:30px;display:grid;gap:16px}.tl .card{display:grid;grid-template-columns:200px 1fr;gap:20px}@media(max-width:700px){.tl .card{grid-template-columns:1fr}.edu{grid-template-columns:1fr}}
+.tl{margin-top:30px;display:grid;gap:16px}.tl .card{display:grid;grid-template-columns:200px 1fr;gap:20px}@media(max-width:700px){.tl .card{grid-template-columns:1fr}}
 .card h3{font-size:1.2rem;margin-bottom:6px;letter-spacing:-.01em}.card p{color:var(--muted);line-height:1.55}
 /* stacked card sections */
 .stack{height:175vh;padding:0}.pin{position:sticky;top:0;height:100svh;padding:84px 5vw 24px;display:flex;flex-direction:column;overflow:hidden}
@@ -145,6 +171,16 @@ form{display:grid;gap:10px;max-width:560px}input,textarea{font:inherit;padding:1
 .tilt img{transition:object-position 1.4s,transform 1.8s ease,filter 1.8s ease}body.intro .tilt img{filter:blur(22px);transform:scale(1.2)}
 .tilt::after{content:"";position:absolute;inset:0;background:rgba(19,19,22,.55);opacity:0;transition:opacity 1.8s ease;pointer-events:none}body.intro .tilt::after{opacity:1}
 #hello{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:30;font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;font-size:clamp(1.05rem,4.4vw,3.2rem);letter-spacing:-.045em;line-height:1.05;white-space:nowrap;color:#f4f2e6;text-shadow:0 4px 28px rgba(0,0,0,.5);pointer-events:none;direction:ltr}
+/* logo: dark-background version on the dark theme, beige-background version on the light theme */
+:root[data-theme=dark] .lg-l,:root:not([data-theme=dark]) .lg-d{display:none!important}
+body.lgfly nav .logo img{opacity:0}
+#introLogo{position:fixed;left:50%;top:50%;width:clamp(150px,30vw,260px);aspect-ratio:1;translate:-50% -50%;z-index:60;border-radius:50%;overflow:hidden;pointer-events:none;transform-origin:0 0;border:1px solid rgba(244,242,230,.22);box-shadow:0 24px 60px -16px rgba(0,0,0,.7),0 0 0 9px rgba(244,242,230,.06)}
+nav{transition:opacity .8s ease}body.navhide nav{opacity:0;pointer-events:none}
+#introLogo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+#introLogo{opacity:0;animation:lgIn .5s cubic-bezier(.2,.8,.2,1) .05s forwards}
+#introLogo::after{content:"";position:absolute;inset:0;z-index:3;border-radius:50%;pointer-events:none;background:linear-gradient(115deg,transparent 32%,rgba(255,255,255,.75) 50%,transparent 68%);background-size:250% 100%;background-position:160% 0;animation:shine .9s ease-out .4s both}
+@keyframes lgIn{from{opacity:0;scale:.86}to{opacity:1;scale:1}}
+#introLogo .l{opacity:0;transition:opacity 1.4s cubic-bezier(.77,0,.18,1)}
 #hello .nm{display:inline-block;color:#93aecb;transform-origin:0 0}#hello .hi{transition:opacity .5s}
 #hello .cur{display:inline-block;width:.08em;height:.95em;background:#f4f2e6;margin-inline-start:.1em;vertical-align:-.1em;animation:bl 1s steps(2) infinite;transition:opacity .3s}#hello.go .hi,#hello.go .cur{opacity:0}
 /* certificates: card (image on top + details) and click-to-open modal */
@@ -291,7 +327,7 @@ body:not(.intro) #portrait:not(.settling) .tilt img{transition:transform .45s cu
 }
 
 /* logo inside the floating contact pill */
-#cpill{padding-inline-start:8px}#cpill .lg{width:46px;height:46px;border-radius:50%;object-fit:cover;flex:none;border:1px solid var(--border);box-shadow:0 6px 16px -6px var(--shadow)}
+#cpill{padding-inline-start:8px;cursor:pointer}#cpill *{cursor:pointer}#cpill .lg{width:46px;height:46px;border-radius:50%;object-fit:cover;flex:none;border:1px solid var(--border);box-shadow:0 6px 16px -6px var(--shadow)}
 
 /* contact pill: logo + text + animated dots; the 3 icons only appear on hover */
 #cpill .act{position:relative;width:46px;height:46px;flex:none;transition:width .5s cubic-bezier(.2,.8,.2,1)}
@@ -482,8 +518,17 @@ nav.open #burger i:nth-child(1){transform:rotate(45deg)}nav.open #burger i:nth-c
 
 /* ===== Pricing (UI/UX + Flutter): segmented toggle + glass plan cards (same glass recipe as Skills / Services) ===== */
 #pricing{isolation:isolate}
-#pricing::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(44% 40% at 84% 26%,var(--gl1),transparent 72%),radial-gradient(40% 36% at 12% 80%,var(--gl2),transparent 72%)}
-#prToggle{margin-top:30px}
+.pr-open{display:flex;justify-content:center;margin-top:44px}
+#prOpen svg{width:18px;height:18px;flex:none;transition:rotate .45s cubic-bezier(.2,.8,.2,1)}
+#prOpen[aria-expanded=true] svg{rotate:180deg}
+.pr-collapse{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:0fr;transition:grid-template-rows .6s cubic-bezier(.2,.8,.2,1)}
+.pr-collapse.open{grid-template-rows:1fr}
+.pr-inner{min-height:0;overflow:hidden}.pr-collapse.done .pr-inner{overflow:visible}
+.pr-body{padding:70px 0 10px}
+@media(prefers-reduced-motion:reduce){.pr-collapse{transition:none}}
+#prToggle{margin-top:30px}#prPlans{margin-top:14px}
+@media(min-width:1001px){#prPlans{display:none}}
+.pr-grid.one{grid-template-columns:minmax(0,460px);justify-content:center}
 .pr-stage{margin-top:36px}
 .pr-head{display:flex;align-items:center;gap:12px;margin-bottom:10px;animation:skIn .5s cubic-bezier(.2,.8,.2,1) both}
 .pr-head i{width:11px;height:11px;border-radius:50%;flex:none;background:var(--accent);box-shadow:0 0 14px var(--accent)}
@@ -527,11 +572,13 @@ nav.open #burger i:nth-child(1){transform:rotate(45deg)}nav.open #burger i:nth-c
 .pr-stage.rv:not(.in) :is(.prc,.prx,.pr-head,.pr-sub){animation-play-state:paused}
 [dir=rtl] .prc,[dir=rtl] .prx,[dir=rtl] .pr-note,[dir=rtl] .pr-sub,[dir=rtl] .pr-head{font-family:Cairo,"Inter Tight",system-ui,sans-serif}
 @media(hover:hover){.prc:hover{scale:1.03;translate:0 -8px;border-color:color-mix(in srgb,var(--accent) 45%,var(--gb));box-shadow:inset 0 1px 0 var(--gh),0 40px 70px -32px var(--shadow)}.prc.pop:hover{scale:1.035;translate:0 -20px}.prx:hover{translate:0 -3px;border-color:color-mix(in srgb,var(--accent) 40%,var(--border));background:color-mix(in srgb,var(--surface) 80%,transparent)}}
+@media(min-width:1001px){.pr-grid.n1{grid-template-columns:minmax(0,460px);justify-content:center}.pr-grid.n2{grid-template-columns:repeat(2,minmax(0,1fr));max-width:860px;margin-inline:auto}}
+#prPlans[hidden]{display:none}
 @media(max-width:1000px){.pr-grid{grid-template-columns:1fr;gap:30px}.prc.pop{translate:0 0}.prd{min-height:0}}
 @media(max-width:700px){.pr-xl{grid-template-columns:1fr}.prc{padding:28px 20px 20px;border-radius:24px}.prx{padding:14px 16px}.pr-extras{margin-top:48px}.pr-sub{margin-bottom:26px}}
-</style></head><body class="intro">
+</style></head><body class="intro navhide lgfly">
 <a class="sr" href="#about">Skip to content</a>
-<nav aria-label="Primary"><a class="logo" href="#home" aria-label="Adham Ramadan — home"><img id="logoImg" alt="" width="36" height="36"></a><ul id="menu"></ul>
+<nav aria-label="Primary"><a class="logo" href="#home" aria-label="Adham Ramadan — home"><img id="logoImg" class="lg-d" alt="" width="36" height="36"><img id="logoImgL" class="lg-l" alt="" width="36" height="36"></a><ul id="menu"></ul>
 <button class="ibtn" id="theme" aria-label="Toggle dark mode"><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
 <button class="ibtn" id="lang" aria-label="Switch language / تغيير اللغة"></button>
 <button class="ibtn" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu"><i></i><i></i><i></i></button></nav>
@@ -539,7 +586,7 @@ nav.open #burger i:nth-child(1){transform:rotate(45deg)}nav.open #burger i:nth-c
 <div id="portrait" title="Adham Ramadan"><div class="tilt" id="tilt"><img id="pimg" alt="Portrait of Adham Ramadan seated by the Nile" decoding="async"></div></div>
 
 <div id="cm" aria-hidden="true"></div>
-<div id="hello" aria-hidden="true"><span class="hi"></span><span class="nm"></span><i class="cur"></i></div>
+<div id="hello" aria-hidden="true"><span class="hi"></span><span class="nm"></span><i class="cur"></i></div><div id="introLogo" aria-hidden="true"><img class="d" alt=""><img class="l" alt=""></div>
 <main>
 <section id="home"><div class="hero-text"><h1 id="name" class="hold"></h1>
 <div class="hero-more"><div class="typed" aria-hidden="true"><span id="typed"></span><i></i></div><p class="sr" id="rolesSr"></p><p class="lead" id="intro"></p><div class="row" id="heroBtns"></div></div></div><div class="slot" id="heroSlot"></div></section>
@@ -548,12 +595,12 @@ nav.open #burger i:nth-child(1){transform:rotate(45deg)}nav.open #burger i:nth-c
 <section id="certificates"><div class="wrap"><div class="eyebrow rv"></div><h2></h2><p class="psub rv"></p><div class="pgrid" id="cGrid"></div></div></section>
 <section id="skills"><div class="wrap"><div class="eyebrow rv">Core competencies</div><h2 class="rv">Skills</h2><div class="sk-tabs rv" id="skTabs" role="tablist" aria-label="Skill categories"></div><div class="sk-panel rv" id="skPanel" role="tabpanel" style="--d:.1s"></div></div></section>
 <section id="experience"><div class="wrap"><div class="eyebrow rv">Professional journey</div><h2 class="rv">Experience</h2><div id="expList" class="xl"></div></div></section>
-<section id="services"><div class="wrap"><div class="eyebrow rv">Value proposition</div><h2 class="rv">Services</h2><div id="svcList" class="pgrid agrid"></div></div></section>
+<section id="services"><div class="wrap"><div class="eyebrow rv">Value proposition</div><h2 class="rv">Services</h2><div id="svcList" class="pgrid agrid"></div><div class="pr-open rv"><button type="button" class="btn ghost" id="prOpen" aria-expanded="false" aria-controls="pricing"><span id="prBtnT">Pricing list</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></div><div id="pricing" class="pr-collapse" aria-hidden="true" inert><div class="pr-inner"><div class="pr-body"><div class="eyebrow rv"></div><h2></h2><p class="psub rv" id="prSub"></p><div class="sk-tabs rv" id="prToggle" role="tablist" aria-label="Pricing categories"></div><div class="sk-tabs rv" id="prPlans" role="tablist" aria-label="Pricing packages"></div><div class="pr-stage rv" id="prStage" role="tabpanel" style="--d:.1s"></div></div></div></div></div></section>
 <section id="projects"><div class="wrap"><div class="eyebrow rv"></div><h2></h2><p class="psub rv"></p><div class="pgrid" id="pGrid"></div></div></section>
 <section id="achievements"><div class="wrap"><div class="eyebrow rv"></div><h2></h2><p class="psub rv" id="aSub"></p><div class="pgrid agrid" id="aGrid"></div></div></section>
 
 <section id="testimonials"><div class="wrap"><div class="eyebrow rv"></div><h2></h2><p class="psub rv" id="tSub"></p><div class="pgrid agrid tgrid" id="tGrid"></div></div></section>
-<section id="pricing"><div class="wrap"><div class="eyebrow rv"></div><h2></h2><p class="psub rv" id="prSub"></p><div class="sk-tabs rv" id="prToggle" role="tablist" aria-label="Pricing categories"></div><div class="pr-stage rv" id="prStage" role="tabpanel" style="--d:.1s"></div></div></section>
+
 
 <section id="contact"><div class="wrap rv" id="cwrap"><h2><span class="mask"><span><span id="lets"></span> <span class="words" id="words" style="display:inline-block"></span> <a class="npill" href="#home" id="npill"><img id="npImg" alt=""><span id="npName"></span></a></span></span><span class="mask"><span id="tog" style="transition-delay:.15s"></span></span></h2>
 <p id="cNote" style="color:#8a8a90;margin-top:14px;max-width:34rem"></p>
@@ -594,7 +641,7 @@ const ICON=k=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
 const href=(k,v)=>k==='email'?'mailto:'+v:k==='phone'?'tel:'+v:k==='whatsapp'&&!/^http/.test(v)?'https://wa.me/'+v.replace(/\D/g,''):v;
 const ENT=()=>Object.entries(L).filter(([k,v])=>v&&k!=='cv').map(([k,v])=>({k,label:lab(k),url:href(k,v),v}));
 const ext=u=>/^http/.test(u)?' target="_blank" rel="noopener"':'';
-$('#logoImg').src=P.logo;$('#name').textContent=P.name;$('#pimg').src=P.portrait;$('#giant').textContent=P.name;$('#rolesSr').textContent=P.titles.join(', ');
+$('#logoImg').src=P.logo;$('#logoImgL').src=P.logoLight||P.logo;{const il=$('#introLogo');il.querySelector('.d').src=P.logo;il.querySelector('.l').src=P.logoLight||P.logo}$('#name').textContent=P.name;$('#pimg').src=P.portrait;$('#giant').textContent=P.name;$('#rolesSr').textContent=P.titles.join(', ');
 $('#copy').textContent='© '+new Date().getFullYear()+' '+P.name;
 const io=new IntersectionObserver(es=>{let k=0;es.forEach(e=>{if(!e.isIntersecting)return;const t=e.target;if(!t.classList.contains('wr')){t.style.setProperty('--d',(k++*.09)+'s');setTimeout(()=>t.style.setProperty('--d','0s'),1500+k*90)}t.classList.add('in');io.unobserve(t)})},{threshold:.12});
 const splitH=h=>{h.innerHTML=h.textContent.split(/\s+/).filter(Boolean).map((w,i)=>`<span class="w" style="--i:${i}">${w}</span>`).join(' ');h.classList.remove('rv','in');h.classList.add('wr');void h.offsetWidth};
@@ -621,24 +668,36 @@ addEventListener('keydown',e=>{if(e.key==='Escape')setNav(false)});
 addEventListener('scroll',()=>{if(navEl.classList.contains('open'))setNav(false)},{passive:true});
 addEventListener('resize',()=>{if(innerWidth>700)setNav(false)});
 const PRI={check:'<circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',star:'<path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/>'};
-let prTab=0,prAr=false;
+let prTab=0,prPlan=-1,prAr=false;
 const prX=t=>escH(t).replace(/(\d+(?:[\u2013-]\d+)+)/g,'<bdi dir="ltr">$1</bdi>'),prT=(o,k)=>(prAr&&o[k+'_ar'])||o[k],prSvg=k=>`<svg viewBox="0 0 24 24" aria-hidden="true">${PRI[k]}</svg>`;
 function prMove(){const bar=document.getElementById('prToggle'),t=bar&&bar.querySelector('[aria-selected=true]');if(!t)return;bar.style.setProperty('--ix',t.offsetLeft+'px');bar.style.setProperty('--iw',t.offsetWidth+'px')}
 function prCard(p,i,P,tab){const pop=!!p.popular;
- return `<article class="prc${pop?' pop':''}" style="--i:${i}">${pop?`<span class="prb">${prSvg('star')}${escH(prT(P,'popular'))}</span>`:''}`
+ return `<article class="prc${pop?' pop':''}" style="--i:${i}">${pop?`<span class="prb">${prSvg('star')}${escH(prT(p,'badge')||prT(P,'popular'))}</span>`:''}`
  +`<div><span class="prn">${escH(prT(P,'pkg'))} ${String(i+1).padStart(2,'0')}</span><h4>${prX(prT(p,'name'))}</h4><p class="prd">${prX(prT(p,'desc'))}</p></div>`
- +`<ul class="prf">${p.features.map(f=>`<li>${prSvg('check')}<span>${prX(prAr?f[1]:f[0])}</span></li>`).join('')}<li class="dl">${prSvg('clock')}<div><span>${escH(prT(P,'delivery'))}</span><b>${prX(prAr?p.time[1]:p.time[0])}</b></div></li></ul>`
+ +`<ul class="prf">${p.features.map(f=>`<li>${prSvg('check')}<span>${prX(prAr?f[1]:f[0])}</span></li>`).join('')}${p.time?`<li class="dl">${prSvg('clock')}<div><span>${escH(prT(P,'delivery'))}</span><b>${prX(prAr?p.time[1]:p.time[0])}</b></div></li>`:''}</ul>`
  +`<div class="prc-foot"><div class="prp"><b dir="ltr">${escH(p.price)}</b><span>${escH(prT(tab,'unit'))}</span></div><a class="prcta" href="#contact">${escH(prT(P,'cta'))}</a></div></article>`}
-function prPanel(){const P=window.PRICING;if(!P||!P.tabs[prTab])return;const t=P.tabs[prTab];
+function prPanel(){const P=window.PRICING;if(!P||!P.tabs[prTab])return;const t=P.tabs[prTab],pp=innerWidth>1000?-1:prPlan;
  document.getElementById('prStage').innerHTML=`<div class="pr-head"><i></i><h3>${prX(prT(t,'title'))}</h3></div><p class="pr-sub">${prX(prT(t,'sub'))}</p>`
- +`<div class="pr-grid">${t.plans.map((p,i)=>prCard(p,i,P,t)).join('')}</div>`
- +`<div class="pr-extras"><div class="pr-head sm"><i></i><h3>${escH(prT(P,'extrasTitle'))}</h3></div><ul class="pr-xl">${t.extras.map((e,k)=>`<li class="prx" style="--i:${k}"><span>${prX(prAr?e[1]:e[0])}</span><b dir="ltr">${escH(e[2])}</b></li>`).join('')}</ul></div>`
+ +`<div class="pr-grid${pp>=0?' one':''} n${t.plans.length}">${t.plans.map((p,i)=>pp<0||pp===i?prCard(p,i,P,t):'').join('')}</div>`
+ +(t.extras&&t.extras.length?`<div class="pr-extras"><div class="pr-head sm"><i></i><h3>${escH(prT(P,'extrasTitle'))}</h3></div><ul class="pr-xl">${t.extras.map((e,k)=>`<li class="prx" style="--i:${k}"><span>${prX(prAr?e[1]:e[0])}</span><b dir="ltr">${escH(e[2])}</b></li>`).join('')}</ul></div>`:'')
  +(t.note?`<p class="pr-note">${prX(prT(t,'note'))}</p>`:'')}
 function prTabs(){const P=window.PRICING;if(!P)return;document.getElementById('prToggle').innerHTML='<i class="sk-ind"></i>'+P.tabs.map((t,i)=>`<button type="button" class="sk-tab" role="tab" data-i="${i}" aria-selected="${i===prTab}" tabindex="${i===prTab?0:-1}">${escH(prT(t,'label'))}</button>`).join('');prMove()}
-function prPick(i,focus){const P=window.PRICING;if(!P||i===prTab||!P.tabs[i])return;prTab=i;document.getElementById('prToggle').querySelectorAll('.sk-tab').forEach((b,k)=>{b.setAttribute('aria-selected',k===i);b.tabIndex=k===i?0:-1;if(k===i&&focus)b.focus()});prMove();prPanel()}
+function prPlanBar(){const P=window.PRICING,t=P&&P.tabs[prTab],bar=document.getElementById('prPlans');if(!t)return;
+ const names=[[-1,prAr?(P.all_ar||'الكل'):(P.all||'All')]].concat(t.plans.map((p,i)=>[i,prT(p,'name')]));
+ bar.hidden=t.plans.length<2;bar.innerHTML='<i class="sk-ind"></i>'+names.map(([i,n])=>`<button type="button" class="sk-tab" role="tab" data-p="${i}" aria-selected="${i===prPlan}" tabindex="${i===prPlan?0:-1}">${escH(n)}</button>`).join('');prPlanMove()}
+function prPlanMove(){const bar=document.getElementById('prPlans'),t=bar&&bar.querySelector('[aria-selected=true]');if(!t)return;bar.style.setProperty('--ix',t.offsetLeft+'px');bar.style.setProperty('--iw',t.offsetWidth+'px')}
+function prPlanPick(i,focus){if(i===prPlan)return;prPlan=i;document.getElementById('prPlans').querySelectorAll('.sk-tab').forEach(b=>{const on=+b.dataset.p===i;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;if(on&&focus)b.focus()});prPlanMove();prPanel()}
+document.getElementById('prPlans').addEventListener('click',e=>{const b=e.target.closest('.sk-tab');if(b)prPlanPick(+b.dataset.p)});
+document.getElementById('prPlans').addEventListener('keydown',e=>{const t=(window.PRICING||{tabs:[]}).tabs[prTab];if(!t)return;const n=t.plans.length+1,k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(k){e.preventDefault();prPlanPick(((prPlan+1+k+n)%n)-1,true)}});
+function prPick(i,focus){const P=window.PRICING;if(!P||i===prTab||!P.tabs[i])return;prTab=i;prPlan=-1;prPlanBar();document.getElementById('prToggle').querySelectorAll('.sk-tab').forEach((b,k)=>{b.setAttribute('aria-selected',k===i);b.tabIndex=k===i?0:-1;if(k===i){if(focus)b.focus();b.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'})}});prMove();prPanel()}
 document.getElementById('prToggle').addEventListener('click',e=>{const b=e.target.closest('.sk-tab');if(b)prPick(+b.dataset.i)});
 document.getElementById('prToggle').addEventListener('keydown',e=>{const n=(window.PRICING||{tabs:[]}).tabs.length,k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(k){e.preventDefault();prPick((prTab+k+n)%n,true)}});
-addEventListener('resize',prMove);
+let prWide=innerWidth>1000;addEventListener('resize',()=>{prMove();prPlanMove();const w=innerWidth>1000;if(w!==prWide){prWide=w;prPanel();prPlanMove()}});
+const prBox=document.getElementById('pricing'),prBtn=document.getElementById('prOpen');let prTm;
+function prSet(o){prBox.classList.toggle('open',o);prBtn.setAttribute('aria-expanded',o);prBox.setAttribute('aria-hidden',!o);prBox.inert=!o;clearTimeout(prTm);if(o)prTm=setTimeout(()=>{prBox.classList.add('done');prMove();prPlanMove()},650);else prBox.classList.remove('done')}
+prBtn.addEventListener('click',()=>prSet(!prBox.classList.contains('open')));
+document.getElementById('menu').addEventListener('click',e=>{const a=e.target.closest('a');if(a&&a.getAttribute('href')==='#pricing'){e.preventDefault();prSet(true);setTimeout(()=>prBox.scrollIntoView({behavior:'smooth',block:'start'}),60)}});
+document.getElementById('cpill').addEventListener('click',e=>{e.preventDefault();document.getElementById('contact').scrollIntoView({behavior:'smooth',block:'start'})});
 let skTab=0,skAr=false;
 function skMove(){const bar=document.getElementById('skTabs'),t=bar&&bar.querySelector('[aria-selected=true]');if(!t)return;bar.style.setProperty('--ix',t.offsetLeft+'px');bar.style.setProperty('--iw',t.offsetWidth+'px')}
 function skPanel(){const g=D.skills[skTab];if(!g)return;document.getElementById('skPanel').innerHTML=`<div class="sk-head"><i></i><h3>${(skAr&&g.group_ar)||g.group}</h3><span>${g.items.length} ${skAr?'مهارة':'skills'}</span></div><div class="sk-grid">${g.items.map((n,i)=>`<div class="skc" style="--i:${Math.min(i,14)}"><span class="ico">${SKI(n)}</span><b>${escH(n)}</b></div>`).join('')}</div>`}
@@ -664,7 +723,9 @@ function render(anim){const x=X(),ar=lang==='ar',ent=ENT();root.lang=lang;root.d
  for(const k in x.e){const s=$('#'+k);if(!s)continue;s.querySelector('.eyebrow').textContent=x.e[k];const h=s.querySelector('h2');if(x.h[k])h.textContent=x.h[k]}
  const MI=['facebook','linkedin','behance'].map(k=>ent.find(e=>e.k===k)).filter(Boolean);
  $('#heroBtns').innerHTML=`<a class="btn" href="#projects">${x.work}</a>`+(L.cv?`<a class="btn ghost" href="${L.cv}" target="_blank" rel="noopener">${x.nav.cv}</a>`:`<a class="btn ghost" href="#contact">${x.contactMe}</a>`);
- $('#eduList').innerHTML=D.education.map(e=>`<div class="card edu rv"><div class="logo-box${e.logo?' has':''}">${e.logo?`<img src="${e.logo}" alt="${e.institution} logo">`:'🎓'}</div><div><div class="eyebrow">${ph(e.title)}</div><h3>${ph(e.degree)}</h3><div class="meta">${ph(e.institution)}</div>${e.detail?`<p>${e.detail}</p>`:''}${e.links.map(l=>`<a class="chip" href="${l.url}"${ext(l.url)}>${l.label}</a>`).join('')}</div></div>`).join('');
+ $('#eduList').innerHTML=D.education.map(e=>{const ar=lang==='ar',t=k=>(ar&&e[k+'_ar'])||e[k]||'',CAL='<rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/>',PIN='<path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/>';
+  const logo=`<img src="${e.logo}" alt="${escH(t('institution'))}" loading="lazy">`;
+  return `<div class="card edu rv">${e.logo?(e.url?`<a class="edu-logo" href="${e.url}" target="_blank" rel="noopener" aria-label="${escH(t('institution'))}" title="${escH(t('institution'))}">${logo}</a>`:`<div class="edu-logo">${logo}</div>`):''}<div class="edu-info"><h3>${ph(t('degree'))}</h3>${e.major?`<div class="edu-major">${escH(t('major'))}</div>`:''}<div class="edu-meta">${e.years?`<span class="edu-date">${IC(CAL)}<bdi dir="ltr">${escH(e.years)}</bdi></span>`:''}${e.year?`<span class="edu-yr">${escH(t('year'))}</span>`:''}</div><div class="edu-loc">${IC(PIN)}<span>${ph(t('institution'))}</span></div></div>${(e.tags||[]).length?`<div class="edu-more"><div class="edu-div"></div><div class="edu-lbl">${escH(t('tagsLabel'))}</div><div class="edu-tags">${e.tags.map(g=>`<span${g[0]==='…'?` class="more" aria-label="${ar?'والمزيد':'and more'}"`:''}>${escH(ar?g[1]:g[0])}</span>`).join('')}</div></div>`:''}</div>`}).join('');
  skAr=ar;skTabs();skPanel();
  $('#expList').innerHTML='<i class="fill"></i>'+D.experience.map(expCard).join('');
  $('#svcList').style.setProperty('--n',Math.min(D.services.length,4));
@@ -695,8 +756,8 @@ function render(anim){const x=X(),ar=lang==='ar',ent=ENT();root.lang=lang;root.d
  $('#certificates .psub').textContent=x.cpsub;
  $('#cGrid').innerHTML=D.certificates.map((c,i)=>`<article class="pc cert" tabindex="0" role="button" aria-label="${c.title}" style="${ph1(i+1)}"><div class="ci">${c.image?`<i class="cbg" style="background-image:url('${c.image}')"></i><img src="${c.image}" alt="${c.title}" loading="lazy">`:`<div class="im">${c.badge||''}</div>`}</div><div class="lb"><span class="av">${c.image?SH:CK}</span><span>${c.title}</span><span class="ar">↗</span></div></article>`).join('');
  document.querySelectorAll('#cGrid .pc').forEach((c,i)=>{c.onclick=()=>openCert(i,c);c.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openCert(i,c)}}});
- {const pc=['whatsapp','email','linkedin'].filter(k=>L[k]);$('#cpill').innerHTML=`<img class="lg" src="${P.logo}" alt=""><div class="t"><b>${x.pillT}</b><span>${x.pillS}</span></div><div class="act"><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div><div class="ic">${pc.map(k=>{const u=href(k,L[k]);return `<a href="${u}"${ext(u)} aria-label="${lab(k)}">${ICON(k)}</a>`}).join('')}</div></div>`;sched()}
- prAr=ar;{const ps=$('#prSub');if(ps)ps.textContent=x.prsub||''}prTabs();prPanel();
+ {const pc=['whatsapp','email','linkedin'].filter(k=>L[k]);$('#cpill').innerHTML=`<img class="lg lg-d" src="${P.logo}" alt=""><img class="lg lg-l" src="${P.logoLight||P.logo}" alt=""><div class="t"><b>${x.pillT}</b><span>${x.pillS}</span></div><div class="act"><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div><div class="ic">${pc.map(k=>{return `<a href="#contact" aria-label="${lab(k)}">${ICON(k)}</a>`}).join('')}</div></div>`;sched()}
+ prAr=ar;{const bt=$('#prBtnT');if(bt)bt.textContent=ar?'قائمة الأسعار':'Pricing list'}{const ps=$('#prSub');if(ps)ps.textContent=x.prsub||''}prTabs();prPlanBar();prPanel();
  document.querySelectorAll('section:not(#contact) h2').forEach(splitH);
  if(anim){wordsIn($('#aboutP'));wordsIn($('#intro'));wordsIn($('#cNote'));document.querySelectorAll('.eyebrow,.psub').forEach(e=>{e.classList.remove('swap');void e.offsetWidth;e.classList.add('swap')})}
  document.querySelectorAll('.rv:not(.in),.wr:not(.in)').forEach(n=>io.observe(n));fitGiant()}
@@ -720,11 +781,22 @@ root.addEventListener('mouseleave',()=>Pt.classList.remove('hov'));
 function live(){phase='live';setTimeout(()=>sched(),0);Pt.classList.remove('settling');root.style.overflow='';nm.style.transformOrigin='';place()}
 const HELLO="Hello, I'm ";
 function typeHello(done){const hi=$('#hello .hi'),nE=$('#hello .nm'),full=HELLO+P.name;let k=0;const st=()=>{k++;hi.textContent=full.slice(0,Math.min(k,HELLO.length));nE.textContent=full.slice(HELLO.length,k);k<full.length?setTimeout(st,48):done()};setTimeout(st,260)}
-function go(){const H=$('#hello'),n0=$('#hello .nm');document.body.classList.remove('intro');const r0=n0.getBoundingClientRect(),r1=nm.getBoundingClientRect();
+const navLogo=()=>[...document.querySelectorAll('nav .logo img')].find(i=>getComputedStyle(i).display!=='none');
+let LG0=null;
+function logoTo(r,ms,ease,extra){const L=$('#introLogo');L.style.transition=`transform ${ms}ms ${ease},border-color ${ms}ms,box-shadow ${ms}ms`;
+ L.style.transform=`translate(${r.left-LG0.left}px,${r.top-LG0.top}px) scale(${r.width/LG0.width})`;if(extra)extra(L)}
+/* stage 2: big logo (centre) -> top of the screen, shrunk to the navbar-logo size, parked in the middle of the top edge */
+function parkLogo(){const t=navLogo();if(!t||!LG0)return;const b=t.getBoundingClientRect();
+ logoTo({left:innerWidth/2-b.width/2,top:b.top,width:b.width},900,'cubic-bezier(.65,0,.25,1)',L=>{L.style.borderColor=getComputedStyle(t).borderTopColor;L.style.boxShadow='none'})}
+/* stage 3: slide left into its slot in the navbar (the bar fades in) */
+function flyLogo(){const t=navLogo();if(!t||!LG0){$('#introLogo').style.display='none';return}
+ logoTo(t.getBoundingClientRect(),1400,'cubic-bezier(.77,0,.18,1)');if(root.dataset.theme!=='dark')$('#introLogo .l').style.opacity=1}
+function endLogo(){$('#introLogo').style.display='none';document.body.classList.remove('lgfly')}
+function go(){const H=$('#hello'),n0=$('#hello .nm');document.body.classList.remove('intro');const r0=n0.getBoundingClientRect(),r1=nm.getBoundingClientRect();flyLogo();document.body.classList.remove('navhide');
  H.classList.add('go');n0.style.transition='transform 1.4s cubic-bezier(.77,0,.18,1),color 1.4s';n0.style.transform=`translate(${r1.left-r0.left}px,${r1.top-r0.top}px) scale(${r1.width/r0.width})`;n0.style.color=getComputedStyle(nm).color;
- Pt.classList.add('settling');phase='settling';place();setTimeout(()=>{nm.classList.remove('hold');H.style.display='none';live()},1500)}
-function start(){if(reduce){document.body.classList.remove('intro');nm.classList.remove('hold');$('#hello').style.display='none';live();return}
- root.style.overflow='hidden';place();typeHello(()=>setTimeout(go,650))}
+ Pt.classList.add('settling');phase='settling';place();setTimeout(()=>{nm.classList.remove('hold');H.style.display='none';endLogo();live()},1500)}
+function start(){if(reduce){document.body.classList.remove('intro','navhide');$('#introLogo').style.display='none';nm.classList.remove('hold');$('#hello').style.display='none';live();return}
+ root.style.overflow='hidden';place();document.body.classList.add('lgfly','navhide');LG0=$('#introLogo').getBoundingClientRect();setTimeout(parkLogo,1550);setTimeout(()=>typeHello(()=>setTimeout(go,650)),2250)}
 /* reusable stacked-card spread + click-for-details (Projects & Certificates) */
 
 const media=(s,a)=>!s?'':/\.(mp4|webm|mov|m4v)(\?|$)/i.test(s)?`<video src="${s}" autoplay muted loop playsinline aria-label="${a}"></video>`:`<img src="${s}" alt="${a}">`;

@@ -9,6 +9,7 @@ window.PRICING = {
   popular: "Most Popular",            popular_ar: "الأكثر طلبًا",
   pkg: "Package",                     pkg_ar: "الباقة",
   delivery: "Estimated delivery",     delivery_ar: "مدة التسليم المتوقعة",
+  all: "All",                        all_ar: "الكل",       // first tab: shows every package side by side
   extrasTitle: "Additional Services", extrasTitle_ar: "خدمات إضافية",
 
   tabs: [
@@ -143,6 +144,78 @@ window.PRICING = {
         ["Firebase Push Notifications", "إشعارات Firebase Push", "$40–80"],
         ["Bug Fixing for Existing Apps", "إصلاح أخطاء في تطبيقات قائمة", "$30–100"],
         ["App Store / Google Play Publishing Assistance", "مساعدة في النشر على App Store / Google Play", "$50–100"]
+      ]
+    },
+
+    /* ----------------------------- Logo Design ----------------------------- */
+    {
+      id: "logo",
+      label: "Logo Design", label_ar: "تصميم الشعارات",
+      title: "Logo Design Pricing", title_ar: "أسعار تصميم الشعارات",
+      sub: "One custom logo concept, refined with up to 5 revisions until it fits your brand.",
+      sub_ar: "تصميم شعار واحد مخصّص، يُنقَّح بما يصل إلى 5 مراجعات حتى يناسب هويتك.",
+      unit: "/ Logo", unit_ar: "/ شعار",
+      note: "The package includes one logo concept with up to 5 revisions to refine it, not 5 different logos. Each additional revision costs $3.",
+      note_ar: "الباقة تشمل فكرة شعار واحدة مع ما يصل إلى 5 مراجعات لتحسينها، وليست 5 شعارات مختلفة. كل مراجعة إضافية تكلّف 3$.",
+      plans: [
+        {
+          name: "Logo Design", name_ar: "تصميم شعار", price: "$15",
+          desc: "One custom logo concept, refined through up to 5 revisions.",
+          desc_ar: "فكرة شعار واحدة مخصّصة، تُنقَّح عبر ما يصل إلى 5 مراجعات.",
+          features: [
+            ["One custom logo design", "تصميم شعار مخصّص واحد"],
+            ["Multiple file formats: PNG, JPG, and SVG when applicable", "صيغ ملفات متعددة: PNG وJPG وSVG عند الإمكان"],
+            ["High-resolution final files", "ملفات نهائية عالية الدقة"],
+            ["Transparent background version", "نسخة بخلفية شفافة"],
+            ["5 revisions included", "5 مراجعات مشمولة"],
+            ["Each additional revision costs $3", "كل مراجعة إضافية بتكلفة 3$"],
+            ["Delivery of the final logo files", "تسليم ملفات الشعار النهائية"]
+          ]
+        }
+      ]
+    },
+
+    /* ------------------------- Software Development ------------------------- */
+    {
+      id: "software",
+      label: "Software Development", label_ar: "تطوير البرمجيات",
+      title: "Software Development Pricing", title_ar: "أسعار تطوير البرمجيات",
+      sub: "Professional portfolio website packages for projects within a clearly defined scope.",
+      sub_ar: "باقات مواقع بورتفوليو احترافية للمشاريع ضمن نطاق محدد بوضوح.",
+      unit: "/ Project", unit_ar: "/ مشروع",
+      note: "Packages cover portfolio websites within the listed scope. Backend development, database setup, authentication systems, complex API integrations, domain registration and hosting are not included and are quoted separately.",
+      note_ar: "الباقات تغطي مواقع البورتفوليو ضمن النطاق المذكور. لا تشمل تطوير الـ Backend أو إعداد قواعد البيانات أو أنظمة تسجيل الدخول أو ربط APIs معقّد أو تسجيل الدومين أو الاستضافة، ويتم تسعيرها بشكل منفصل.",
+      plans: [
+        {
+          name: "Basic Software", name_ar: "برمجيات أساسية", price: "$70",
+          desc: "A professional personal portfolio website with the essential sections.",
+          desc_ar: "موقع بورتفوليو شخصي احترافي بالأقسام الأساسية.",
+          features: [
+            ["Professional personal portfolio website", "موقع بورتفوليو شخصي احترافي"],
+            ["Up to 4 main sections", "حتى 4 أقسام رئيسية"],
+            ["Responsive design for mobile, tablet, and desktop", "تصميم متجاوب للموبايل والتابلت والكمبيوتر"],
+            ["Projects showcase and contact information", "عرض المشاريع ومعلومات التواصل"],
+            ["Simple animations and transitions", "حركات وانتقالات بسيطة"],
+            ["Source code delivery", "تسليم الكود المصدري"]
+          ],
+          time: ["5–7 Days", "5–7 أيام"]
+        },
+        {
+          name: "Pro Software", name_ar: "برمجيات احترافية", price: "$120", popular: true,
+          badge: "Recommended", badge_ar: "موصى بها",
+          desc: "A portfolio website with a custom design, richer interactions and project detail pages.",
+          desc_ar: "موقع بورتفوليو بتصميم مخصّص وتفاعلات أغنى وصفحات تفاصيل للمشاريع.",
+          features: [
+            ["Professional portfolio website with a custom design", "موقع بورتفوليو احترافي بتصميم مخصّص"],
+            ["Up to 7 main sections", "حتى 7 أقسام رئيسية"],
+            ["More advanced animations and interactive elements", "حركات وعناصر تفاعلية أكثر تقدمًا"],
+            ["Project showcase with separate project detail pages when needed", "عرض المشاريع مع صفحات تفاصيل منفصلة عند الحاجة"],
+            ["Fully responsive layout", "تصميم متجاوب بالكامل"],
+            ["Basic performance optimization", "تحسين أداء أساسي"],
+            ["Source code delivery", "تسليم الكود المصدري"]
+          ],
+          time: ["8–14 Days", "8–14 يوم"]
+        }
       ]
     }
   ]

@@ -1,13 +1,20 @@
 /* ===== CONTENT — edit freely. "[Edit: …]" marks placeholders (shown with a dashed outline). ===== */
 window.DATA={
-profile:{name:"Adham Ramadan",portrait:"images/portrait.jpg",logo:"images/logo.jpg",
+profile:{name:"Adham Ramadan",portrait:"images/portrait.jpg",logo:"images/logo.jpg",logoLight:"images/logo-light.jpg",
  titles:["Software Engineering","Flutter Dev","UI/UX Designer"],
  intro:"Software developer, Flutter developer and UI/UX designer building polished, user-focused digital products.",
  intro_ar:"مطوّر برمجيات ومطوّر Flutter ومصمّم UI/UX، أبني منتجات رقمية أنيقة تركّز على المستخدم.",
  aboutTitle:"I love to learn new things and experiment with new technologies.",aboutTitle_ar:"أحب تعلّم كل جديد وتجربة التقنيات الحديثة.",
  about:"My passion for technology started at a young age. I was always curious about how apps were built and how simple ideas could become something people use every day.\n\nToday, I’m turning that curiosity into a career by building mobile applications with Flutter & Dart, while focusing on UI/UX and creating smooth, user-friendly experiences.\n\nMy goal is simple: turn ideas into real, impactful applications.",about_ar:"بدأ شغفي بالتكنولوجيا منذ سنٍّ صغيرة. كنت دائمًا فضوليًا لأعرف كيف تُبنى التطبيقات، وكيف يمكن لفكرة بسيطة أن تتحول إلى شيء يستخدمه الناس كل يوم.\n\nواليوم أحوّل هذا الفضول إلى مسار مهني، فأبني تطبيقات الموبايل باستخدام Flutter وDart، مع التركيز على تصميم الـ UI/UX وصناعة تجارب سلسة وسهلة الاستخدام.\n\nهدفي بسيط: تحويل الأفكار إلى تطبيقات حقيقية ومؤثرة."},
-nav:[["home","#home"],["about","#about"],["education","#education"],["certificates","#certificates"],["skills","#skills"],["experience","#experience"],["services","#services"],["projects","#projects"],["achievements","#achievements"],["testimonials","#testimonials"],["pricing","#pricing"],["contact","#contact"]],
-education:[{title:"Expected Graduation: 2027",degree:"Bachelor of Information Technology",institution:"Beni Suef Technological University — ICT Department",detail:"Current Year: 4th Year",logo:"images/btu.jpg",links:[]}],
+nav:[["home","#home"],["about","#about"],["education","#education"],["certificates","#certificates"],["skills","#skills"],["experience","#experience"],["services","#services"],["projects","#projects"],["achievements","#achievements"],["testimonials","#testimonials"]],
+education:[{
+ degree:"Bachelor of Information Technology",degree_ar:"بكالوريوس تكنولوجيا المعلومات",
+ major:"Specialization: Software",major_ar:"التخصص: هندسة البرمجيات",
+ years:"2023 – 2027",year:"4th Year",year_ar:"السنة الرابعة",
+ institution:"Beni Suef Technological University — ICT Department",institution_ar:"جامعة بني سويف التكنولوجية — قسم تكنولوجيا المعلومات والاتصالات",
+ logo:"images/btu.jpg",url:"https://btu.edu.eg/",
+ tagsLabel:"Core Courses",tagsLabel_ar:"المواد الأساسية",
+ tags:[["Algorithms","الخوارزميات"],["Data Structures","هياكل البيانات"],["Object-Oriented Programming","البرمجة كائنية التوجه"],["Databases","قواعد البيانات"],["Software Engineering","هندسة البرمجيات"],["Web Front-End","تطوير الويب (Front-End)"],["Web Back-End","تطوير الويب (Back-End)"],["Application Development","تطوير التطبيقات"],["Windows Programming","برمجة تطبيقات ويندوز"],["Network Basics","أساسيات الشبكات"],["…","…"]]}],
 certificates:[
  {title:"Cross-Platform Mobile App Development — Flutter",issuer:"Digital Egypt Pioneers Initiative (DEPI)",date:"Currently Enrolled",badge:"In progress",note:"6-month training program — currently enrolled.",tags:["6 months","In progress"],image:"",verify:""},
  {title:"Mobile Application Development",issuer:"Information Technology Institute (ITI)",date:"September 2026",badge:"102 hours",note:"Certificate title: “Cross-Platform Mobile App Development using Flutter”. Training from 24 August 2026 to 15 September 2026 — 102 hours: Web Development using HTML5 & CSS3 (18h), Dart Programming Fundamentals (18h), Mobile Application Development using Flutter (30h), Backend Services using Firebase (12h), Generative AI, AI Agents & Workflow Automation (12h), Freelancing Fundamentals (12h).",tags:["102 hours","Flutter","Dart","Firebase"],image:"images/certs/iti.jpg",verify:""},
