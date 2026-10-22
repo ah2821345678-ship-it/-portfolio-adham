@@ -25,7 +25,7 @@ window.PRICING = {
       note_ar: "أسعار تبدأ منها المشاريع ذات النطاق المحدد بوضوح.",
       plans: [
         {
-          name: "Starter", name_ar: "الأساسية", price: "$30",
+          name: "Starter", name_ar: "الأساسية", price: "$12",
           desc: "Perfect for small projects that need clean and modern user interfaces.",
           desc_ar: "مثالية للمشاريع الصغيرة التي تحتاج واجهات نظيفة وعصرية.",
           features: [
@@ -39,7 +39,7 @@ window.PRICING = {
           time: ["3–5 Business Days", "3–5 أيام عمل"]
         },
         {
-          name: "Professional", name_ar: "الاحترافية", price: "$75", popular: true,
+          name: "Professional", name_ar: "الاحترافية", price: "$30", popular: true,
           desc: "An ideal choice for startups and businesses looking for a polished and consistent digital experience.",
           desc_ar: "اختيار مثالي للشركات الناشئة والأعمال التي تبحث عن تجربة رقمية مصقولة ومتناسقة.",
           features: [
@@ -54,7 +54,7 @@ window.PRICING = {
           time: ["5–8 Business Days", "5–8 أيام عمل"]
         },
         {
-          name: "Advanced", name_ar: "المتقدمة", price: "$150",
+          name: "Advanced", name_ar: "المتقدمة", price: "$60",
           desc: "For medium-sized projects that require a more complete and consistent design experience.",
           desc_ar: "للمشاريع المتوسطة التي تحتاج تجربة تصميم أكمل وأكثر اتساقًا.",
           features: [
@@ -71,11 +71,11 @@ window.PRICING = {
         }
       ],
       extras: [
-        ["3 Additional Simple Screens", "3 شاشات بسيطة إضافية", "$15"],
-        ["Landing Page Design", "تصميم صفحة هبوط (Landing Page)", "$30–50"],
-        ["Basic Dashboard Design", "تصميم لوحة تحكم أساسية", "$40–70"],
-        ["UI Redesign", "إعادة تصميم واجهة (UI Redesign)", "$50–100"],
-        ["Standalone Interactive Prototype", "نموذج تفاعلي منفصل", "$15–30"]
+        ["3 Additional Simple Screens", "3 شاشات بسيطة إضافية", "$6"],
+        ["Landing Page Design", "تصميم صفحة هبوط (Landing Page)", "$12–20"],
+        ["Basic Dashboard Design", "تصميم لوحة تحكم أساسية", "$16–28"],
+        ["UI Redesign", "إعادة تصميم واجهة (UI Redesign)", "$20–40"],
+        ["Standalone Interactive Prototype", "نموذج تفاعلي منفصل", "$6–12"]
       ]
     },
 
@@ -91,7 +91,7 @@ window.PRICING = {
       note_ar: "هذه أسعار تبدأ منها المشاريع ذات النطاق المحدد بوضوح. لا تشمل تطوير الـ Backend أو الخدمات المدفوعة من أطراف ثالثة أو رسوم المتاجر ما لم يُذكر ذلك صراحةً.",
       plans: [
         {
-          name: "Basic App", name_ar: "تطبيق أساسي", price: "$150",
+          name: "Basic App", name_ar: "تطبيق أساسي", price: "$60",
           desc: "A simple Flutter app with a few screens and basic local data.",
           desc_ar: "تطبيق Flutter بسيط بعدد قليل من الشاشات وبيانات محلية أساسية.",
           features: [
@@ -105,7 +105,7 @@ window.PRICING = {
           time: ["5–10 Business Days", "5–10 أيام عمل"]
         },
         {
-          name: "Standard App", name_ar: "تطبيق قياسي", price: "$350", popular: true,
+          name: "Standard App", name_ar: "تطبيق قياسي", price: "$140", popular: true,
           desc: "A Flutter app connected to your existing REST API, with organized code and clear UI states.",
           desc_ar: "تطبيق Flutter مرتبط بـ REST API موجود لديك، بكود منظّم وحالات واجهة واضحة.",
           features: [
@@ -121,7 +121,7 @@ window.PRICING = {
           time: ["2–4 Weeks", "من 2 إلى 4 أسابيع"]
         },
         {
-          name: "Advanced App", name_ar: "تطبيق متقدم", price: "$700",
+          name: "Advanced App", name_ar: "تطبيق متقدم", price: "$280",
           desc: "A scalable Flutter app with multiple API integrations, user permissions and documentation.",
           desc_ar: "تطبيق Flutter قابل للتوسّع مع ربط عدة APIs وصلاحيات مستخدمين وتوثيق.",
           features: [
@@ -138,12 +138,12 @@ window.PRICING = {
         }
       ],
       extras: [
-        ["3 Additional Simple Screens", "3 شاشات بسيطة إضافية", "$40–70"],
-        ["Additional API Integration", "ربط API إضافي", "$30–80"],
-        ["Authentication Implementation", "تنفيذ نظام تسجيل الدخول", "$50–100"],
-        ["Firebase Push Notifications", "إشعارات Firebase Push", "$40–80"],
-        ["Bug Fixing for Existing Apps", "إصلاح أخطاء في تطبيقات قائمة", "$30–100"],
-        ["App Store / Google Play Publishing Assistance", "مساعدة في النشر على App Store / Google Play", "$50–100"]
+        ["3 Additional Simple Screens", "3 شاشات بسيطة إضافية", "$16–28"],
+        ["Additional API Integration", "ربط API إضافي", "$12–32"],
+        ["Authentication Implementation", "تنفيذ نظام تسجيل الدخول", "$20–40"],
+        ["Firebase Push Notifications", "إشعارات Firebase Push", "$16–32"],
+        ["Bug Fixing for Existing Apps", "إصلاح أخطاء في تطبيقات قائمة", "$12–40"],
+        ["App Store / Google Play Publishing Assistance", "مساعدة في النشر على App Store / Google Play", "$20–40"]
       ]
     },
 
@@ -155,11 +155,11 @@ window.PRICING = {
       sub: "One custom logo concept, refined with up to 5 revisions until it fits your brand.",
       sub_ar: "تصميم شعار واحد مخصّص، يُنقَّح بما يصل إلى 5 مراجعات حتى يناسب هويتك.",
       unit: "/ Logo", unit_ar: "/ شعار",
-      note: "The package includes one logo concept with up to 5 revisions to refine it, not 5 different logos. Each additional revision costs $3.",
-      note_ar: "الباقة تشمل فكرة شعار واحدة مع ما يصل إلى 5 مراجعات لتحسينها، وليست 5 شعارات مختلفة. كل مراجعة إضافية تكلّف 3$.",
+      note: "The package includes one logo concept with up to 5 revisions to refine it, not 5 different logos. Each additional revision costs $1.20.",
+      note_ar: "الباقة تشمل فكرة شعار واحدة مع ما يصل إلى 5 مراجعات لتحسينها، وليست 5 شعارات مختلفة. كل مراجعة إضافية تكلّف 1.20$.",
       plans: [
         {
-          name: "Logo Design", name_ar: "تصميم شعار", price: "$15",
+          name: "Logo Design", name_ar: "تصميم شعار", price: "$6",
           desc: "One custom logo concept, refined through up to 5 revisions.",
           desc_ar: "فكرة شعار واحدة مخصّصة، تُنقَّح عبر ما يصل إلى 5 مراجعات.",
           features: [
@@ -168,7 +168,7 @@ window.PRICING = {
             ["High-resolution final files", "ملفات نهائية عالية الدقة"],
             ["Transparent background version", "نسخة بخلفية شفافة"],
             ["5 revisions included", "5 مراجعات مشمولة"],
-            ["Each additional revision costs $3", "كل مراجعة إضافية بتكلفة 3$"],
+            ["Each additional revision costs $1.20", "كل مراجعة إضافية بتكلفة 1.20$"],
             ["Delivery of the final logo files", "تسليم ملفات الشعار النهائية"]
           ]
         }
@@ -187,7 +187,7 @@ window.PRICING = {
       note_ar: "الباقات تغطي مواقع البورتفوليو ضمن النطاق المذكور. لا تشمل تطوير الـ Backend أو إعداد قواعد البيانات أو أنظمة تسجيل الدخول أو ربط APIs معقّد أو تسجيل الدومين أو الاستضافة، ويتم تسعيرها بشكل منفصل.",
       plans: [
         {
-          name: "Basic Portfolio", name_ar: "بورتفوليو أساسي", price: "$70",
+          name: "Basic Portfolio", name_ar: "بورتفوليو أساسي", price: "$28",
           desc: "A professional personal portfolio website with the essential sections.",
           desc_ar: "موقع بورتفوليو شخصي احترافي بالأقسام الأساسية.",
           features: [
@@ -201,7 +201,7 @@ window.PRICING = {
           time: ["5–7 Days", "5–7 أيام"]
         },
         {
-          name: "Pro Portfolio", name_ar: "بورتفوليو احترافي", price: "$120", popular: true,
+          name: "Pro Portfolio", name_ar: "بورتفوليو احترافي", price: "$48", popular: true,
           badge: "Recommended", badge_ar: "موصى بها",
           desc: "A portfolio website with a custom design, richer interactions and project detail pages.",
           desc_ar: "موقع بورتفوليو بتصميم مخصّص وتفاعلات أغنى وصفحات تفاصيل للمشاريع.",
